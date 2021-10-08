@@ -5,6 +5,14 @@
 > 
 
 
+## Nasıl Çalıştırılır ?
+
+-Terminale npx selenium start yazılır.
+
+-Ardından yeni bir terminal açılır.
+
+-Terminale npx codeceptjs run yazılarak otomasyon başlatılır.
+
 ## Test Senaryosu
 
 -Gittigidiyor anasayfasına giriş yap.
