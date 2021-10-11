@@ -21,7 +21,7 @@
 
 -Üçüncü sayfaya git.
 
--İkinci sayfada olduğunu kontrol et.
+-Üçüncü sayfada olduğunu kontrol et.
 
 -Rastgele bir ürünü sepete ekle.
 
