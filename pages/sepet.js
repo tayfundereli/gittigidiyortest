@@ -1,12 +1,16 @@
 const { I } = inject();
-
+let parametreler = require('../Parameters/aranacakdegiskenler.json');
 module.exports = {
+  getEnvironmetParameters : function(key) {
+    return parametreler[key];
+ },
   fields:{
     sepetBosMu:"Sepetinizde ürün bulunmamaktadır."
   },
   select:{
     adetartırma:"//select[@class='amount']",
-    adetkontrol:"//select[@class='amount'][@value='2']"
+    adetkontrol:"//select[@class='amount'][@value='2']",
+    
   },
   buttons:{ 
     sepeteekleme:"//button[@id='add-to-basket']",
@@ -30,7 +34,7 @@ I.click(this.buttons.sepetegit);
 
 urunartirma:function(){
   //ürün adedi artırma
-I.selectOption(this.select.adetartırma,"2"); //ürün adedini artırabiliriz.
+I.selectOption(this.select.adetartırma,this.getEnvironmetParameters("urunAdedi")); //ürün adedini artırabiliriz.
 I.seeElement(this.select.adetkontrol);
 },
 urunsilmevekontrol:function(){
